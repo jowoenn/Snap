@@ -1,0 +1,169 @@
+============================================================
+📱 BeReal Clone – Android Kotlin Portfolio Project (5 Weeks)
+============================================================
+
+🛠 Stack:
+- Language: Kotlin
+- Architecture: MVVM (or Clean Architecture)
+- Backend: Firebase (Auth, Firestore, Storage)
+- Camera: CameraX
+- Notification: WorkManager or AlarmManager
+
+============================================================
+WEEK 1 – Planning & Setup
+============================================================
+
+[ ] Define MVP Scope:
+    - Daily dual-camera photo
+    - Timeline/feed
+    - Login/signup
+    - Friends system (basic)
+    - Post visibility after submit
+
+[ ] Sketch wireframes (paper or Figma):
+    - Login screen
+    - Camera screen
+    - Feed/timeline
+    - Profile
+
+[ ] Initialize Android Studio Project:
+    - Use Kotlin
+    - Add Jetpack libraries: Navigation, ViewModel, LiveData
+
+[ ] Setup GitHub repo:
+    - Initial commit
+    - Branching strategy (e.g., `main` + `dev`)
+
+[ ] Setup Firebase:
+    - Firebase Auth (email/password)
+    - Firebase Firestore (user & post metadata)
+    - Firebase Storage (for image uploads)
+
+[ ] Create basic screens:
+    - Splash screen
+    - Login/signup screen (Firebase Auth)
+    - Home/Feed placeholder
+
+============================================================
+WEEK 2 – Camera + Daily Notification
+============================================================
+
+[ ] Implement CameraX:
+    - Request camera permissions
+    - Capture photo with both front and back camera (sequentially is fine)
+    - Show photo preview before upload
+
+[ ] Create Camera Screen:
+    - Front + Back camera trigger
+    - Timestamp display
+    - “Submit” button
+
+[ ] Store photo to Firebase Storage:
+    - Filename: userID_timestamp.jpg
+    - Save front/back image separately or merged
+
+[ ] Save post metadata to Firestore:
+    - Fields: userId, timestamp, latePost (bool), photoURL
+
+[ ] Add notification system:
+    - Use WorkManager or AlarmManager to trigger daily prompt
+    - Randomized time (optional) or fixed (e.g., 8 PM)
+
+============================================================
+WEEK 3 – Feed & Post Display
+============================================================
+
+[ ] Timeline UI:
+    - Use RecyclerView to show friend posts
+    - Post = username + photo + time + late flag
+
+[ ] Fetch posts from Firestore:
+    - Only show todays posts (filter by date)
+    - Sort by time (newest first)
+
+[ ] Allow users to post only once per day:
+    - Check if user has posted today before showing camera
+
+[ ] Handle late posts:
+    - Compare user’s post time to notification time
+    - Show “LATE” indicator if applicable
+
+[ ] Profile Screen:
+    - Show user info
+    - Display personal post history
+
+============================================================
+WEEK 4 – Friends System & Polish
+============================================================
+
+[ ] Friend System (simplified):
+    - Search friend by username
+    - Send/accept friend request
+    - Store friend list under each user (Firestore subcollection)
+
+[ ] Feed filter:
+    - Show only posts from friends
+    - Optionally allow global view for demo
+
+[ ] UI Improvements:
+    - Add loading spinners and toasts
+    - Handle errors (network, camera failure)
+
+[ ] Add basic settings:
+    - Logout
+    - Username change
+
+[ ] Add Firebase Analytics (optional)
+
+============================================================
+WEEK 5 – Testing, Polish & Portfolio Prep
+============================================================
+
+[ ] Test core flows:
+    - Signup/login
+    - Daily photo
+    - Post visibility
+    - Feed updates
+    - Friend add/search
+
+[ ] Polish UI:
+    - Add icons, animations, or colors
+    - Improve transitions and loading indicators
+
+[ ] Offline support:
+    - Show cached feed if offline
+    - Queue post if upload fails (stretch)
+
+[ ] Create README:
+    - Include: overview, features, tech stack, screenshots, build instructions
+
+[ ] Record demo video:
+    - Use screen recorder + voiceover
+    - Upload to YouTube or include in portfolio
+
+[ ] Final cleanup:
+    - Remove test users/posts
+    - Push to GitHub
+    - Shareable GitHub repo with README and link
+
+============================================================
+STRETCH GOALS (If time allows)
+============================================================
+
+[ ] In-app comments or likes
+[ ] Location tagging
+[ ] Dark mode toggle
+[ ] Notification if friend posts
+[ ] Post reactions (emoji)
+[ ] Chat or DMs
+
+============================================================
+TIPS:
+============================================================
+- Commit daily with clear messages
+- Push MVP first, polish later
+- Keep all Firebase calls off main thread
+- Use ViewModel to keep UI responsive
+- Backup code weekly
+
+============================================================
