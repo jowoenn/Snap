@@ -1,17 +1,19 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 android {
-    namespace 'com.example.snap'
-    compileSdk 33
+    namespace 'com.jowoen.snap'
+    compileSdk 36
 
     defaultConfig {
-        applicationId "com.example.snap"
+        applicationId "com.jowoen.snap"
         minSdk 33
-        targetSdk 33
-        versionCode 1
+        targetSdk 36
+        versionCode 2
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -32,6 +34,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
 }
 
@@ -44,9 +47,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.8.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.8.5'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
     // Live data
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
@@ -62,4 +62,8 @@ dependencies {
     implementation "androidx.camera:camera-camera2:1.3.0"
     implementation "androidx.camera:camera-lifecycle:1.3.0"
     implementation "androidx.camera:camera-view:1.3.0"
+
+    //Hilt
+    implementation "com.google.dagger:hilt-android:2.50"
+    kapt "com.google.dagger:hilt-compiler:2.50"
 }

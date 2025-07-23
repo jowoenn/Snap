@@ -158,12 +158,5 @@ STRETCH GOALS (If time allows)
 [ ] Chat or DMs
 
 ============================================================
-TIPS:
-============================================================
-- Commit daily with clear messages
-- Push MVP first, polish later
-- Keep all Firebase calls off main thread
-- Use ViewModel to keep UI responsive
-- Backup code weekly
 
-============================================================
+Notes :
