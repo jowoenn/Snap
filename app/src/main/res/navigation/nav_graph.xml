@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Login">
+
+    <fragment
+        android:id="@+id/Login"
+        android:name="com.jowoen.snap.ui.login.LoginFragment"
+        android:label="@string/loginTxt">
+
+        <action
+            android:id="@+id/loginToRegister"
+            app:destination="@id/Register" />
+    </fragment>
+    <fragment
+        android:id="@+id/Register"
+        android:name="com.jowoen.snap.ui.register.RegisterFragment"
+        android:label="@string/registerTxt">
+
+        <action
+            android:id="@+id/registerToLogin"
+            app:destination="@id/Login" />
+    </fragment>
+</navigation>

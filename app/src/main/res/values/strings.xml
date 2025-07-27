@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Snap</string>
+
+    <!-- Login and Register -->
+    <string name="loginTxt">Login</string>
+    <string name="registerTxt">Register</string>
+    <string name="emailTxt">Email</string>
+    <string name="passwordTxt">Password</string>
+
+    <!-- Database -->
+    <string name="appNameDb">SnapDB</string>
+
+</resources>
